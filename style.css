@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Noto+Music&family=Poppins:wght@200;300;400;500;600;700;800&family=Qwitcher+Grypen:wght@700&display=swap');
+/*
+z-index: 
+ - 1000 hamburger
+ - 999 nav
+
+*/
+:root{
+    --alb: white;
+    --negru: black;
+    --maro: #692d15;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+header{
+    width: 100%;
+    height: 110px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    flex-direction: row;
+}
+nav{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    transition: all .5s;
+    color: var(--alb);
+}
+nav .title{
+    padding-left: 30px;
+    font-size: 27px;
+}
+nav ul{
+    padding-right: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+nav ul .hamburger{
+    width: 28px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    cursor: pointer;
+}
+nav ul .hamburger .h-line{
+    width: 100%;
+    height: 3px;
+    background-color: var(--alb);
+}
+.navOn{
+    background-color: var(--negru);
+    box-shadow: 0 0 6px 6px rgba(0, 0, 0, .1);
+}
+
+
+/*====HAMBURGER=====*/
+.navHamburger{
+    position: fixed;
+    right: -100%;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+    background-color: black;
+    box-shadow: 0 0 6px 6px rgba(0, 0, 0, .1);
+    transition: all 1s ease;
+
+}
+.activare_navHamburger{
+    position: fixed;
+    right: 0%;
+}
+.navHamburger .close{
+    width: 69px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    color: var(--alb);
+    cursor: pointer;
+}
+.navHamburger .links-h{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+.navHamburger .links-h li{
+    text-align: center;
+}
+.navHamburger .links-h li a{
+    font-size: 25px;
+    color: var(--alb);
+}
+
+
+/*===== SECTION =====*/
+.section-1{
+    width: 100%;
+    height: 600px;
+    padding-top: 200px;
+    background-image: url("Image/background-image.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-blend-mode: darken;
+    display: flex;
+    justify-content: center;
+}
+.section-1 .text-introductiv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    color: var(--alb);
+}
+.section-1 .text-introductiv .slogan{
+    width: max-content;
+    height: max-content;
+    rotate: -15deg;
+    border-bottom: 3px solid black;
+}
+/*
+.section-1 .text-introductiv h1{
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: var(--alb);
+    text-align: center;
+}
+.section-1 .text-introductiv h3{
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: var(--alb);
+}
+
+
+/*.section-1 .background-clip{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}*/
+
+/*=====SECTION 2======*/
+.section-2{
+    width: 100%;
+    height: max-content;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/*======SECTION 3=====*/
+.section-3{
+    width: 100%;
+    height: max-content;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    background-color: #F7F7F7;
+}
+.section-3 ul{
+    width: 90%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+.section-3 ul .contact-info{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+}
+.section-3 ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+.section-3 ul li img{
+    width: 35px;
+}
+.section-3 ul li h5{
+    padding-left: 0px;
+    cursor: default;
+}
+.section-3 ul .map{
+    width: 300px;
+    height: 320px;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, .1);
+}
+.section-3 .social-media{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.section-3 .social-media i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+
+}
+
+/*=====SECTION 4======*/
+.section-4{
+    width: 100%;
+    height: max-content;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*=====FOOTER=====*/
+footer{
+    width: 100%;
+    height: 70px;
+    background-color: var(--negru);
+}
+footer h4{
+    color: var(--alb);
+}
+
+
+
+
+/*=====Diverse=====*/
+.button-more{
+    width: max-content;
+    height: 45px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: var(--alb);
+    border: 2px solid var(--negru);
+    border-radius: 23px;
+    font-size: 10px;
+    transition: all .35s ease;
+}
+.button-more:hover{
+    background-color: var(--maro);
+    border: 2px solid var(--maro);
+    color: var(--alb);
+}
+.title-section{
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: var(--negru);
+}
+strong{
+    font-weight: 600;
+}
+/*==text poppins and paragraphs==*/
+p{
+    max-width: 770px;
+}
+.font-p{
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    
+}
+.pp6{
+    font-weight: 650;
+}
+.pp5{
+    font-weight: 550;
+}
+.pp4{
+    font-weight: 400;
+}
+.pp3{
+    font-weight: 300;
+}
+
+
+
+
+/*===== MEDIA =====*/
+/* VIDEO BACKGROUND
+@media (min-aspect-ratio:16/9){
+    .section-1 .background-clip{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio:16/9){
+    .section-1 .background-clip{
+        width: auto;
+        height: 100%;
+    }   
+}
+*/
+
+@media all and (max-width: 520px) {
+    .navHamburger .links-h li a{
+        font-size: 18px;
+    }
+}
+@media all and (max-width: 320px){
+    .section-3 ul .map{
+        width: 220px;
+        height: 270px;
+    }
+}
